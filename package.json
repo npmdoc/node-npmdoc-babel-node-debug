@@ -1,1 +1,39 @@
-{     "devDependencies": {         "babel-node-debug": "*",         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmdoc-babel-node-debug",     "homepage": "https://github.com/npmdoc/node-npmdoc-babel-node-debug",     "repository": {         "type": "git",         "url": "https://github.com/npmdoc/node-npmdoc-babel-node-debug.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "#### api documentation for  [babel-node-debug (v2.0.0)](https://github.com/crabdude/babel-node-debug#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-babel-node-debug.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-babel-node-debug) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-babel-node-debug.svg)](https://travis-ci.org/npmdoc/node-npmdoc-babel-node-debug)",
+    "devDependencies": {
+        "babel-node-debug": "*",
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-babel-node-debug",
+    "keywords": [
+        "documentation",
+        "babel-node-debug"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_babel_node_debug.js",
+    "name": "npmdoc-babel-node-debug",
+    "nameAlias": "npmdoc_babel_node_debug",
+    "nameOriginal": "npmdoc-babel-node-debug",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmdoc/node-npmdoc-babel-node-debug.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "npm install \"kaizhu256/node-utility2#alpha\" && utility2 shDeployHeroku",
+        "postinstall": "[ ! -f npm_scripts.sh ] || ./npm_scripts.sh postinstall",
+        "start": "PORT=${PORT:-8080} utility2 start test.js",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "0.0.1"
+}
